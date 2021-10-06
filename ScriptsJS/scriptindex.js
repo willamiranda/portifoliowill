@@ -4,12 +4,18 @@ const video = document.getElementById('video')
 const title = document.getElementById('title')
 const subTitle = document.getElementById('title2')
 
+const aboutS = document.getElementById('about')
+const aboutTitle = aboutS.querySelector('h1')
+
+const project = document.getElementById('project')
+
+const contact = document.getElementById('contact')
 const controller = new ScrollMagic.Controller()
 
 const scene1 = new ScrollMagic.Scene({
         triggerElement: intro,
         triggerHook: 0,
-        duration: 7500,
+        duration: 4500,
     })
     .setPin(intro)
     .addTo(controller)
@@ -43,4 +49,49 @@ const scene4 = new ScrollMagic.Scene({
 
     })
     .setTween(introSubTxtAnimation)
+    .addTo(controller)
+
+const scene5 = new ScrollMagic.Scene({
+        triggerElement: aboutS,
+        triggerHook: 0,
+        duration: 1500,
+    })
+    .setPin(aboutS)
+    .addTo(controller)
+
+const aboutTxtAnimation = TweenMax.fromTo(aboutTitle, 2.5, { transform: 'scale(1)' }, { transform: 'scale(440)' });
+const scene6 = new ScrollMagic.Scene({
+        triggerElement: aboutS,
+        triggerHook: 0,
+        offset: 200,
+        duration: 1000,
+
+    })
+    .setTween(aboutTxtAnimation)
+    .addTo(controller)
+
+const scene7 = new ScrollMagic.Scene({
+        triggerElement: project,
+        triggerHook: 0,
+        duration: 5500,
+    })
+    .setPin(project)
+    .addTo(controller)
+
+const projectAnimation = TweenMax.fromTo(project, 2, { transform: 'scale(0)' }, { transform: 'scale(1)' });
+const scene8 = new ScrollMagic.Scene({
+        triggerElement: project,
+        triggerHook: 0,
+        offset: 0,
+        duration: 2500,
+
+    })
+    .setTween(projectAnimation)
+    .addTo(controller)
+const scene9 = new ScrollMagic.Scene({
+        triggerElement: contact,
+        triggerHook: 0,
+        duration: 500,
+    })
+    .setPin(project)
     .addTo(controller)
