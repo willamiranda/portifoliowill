@@ -8,8 +8,9 @@ const aboutS = document.getElementById('about')
 const aboutTitle = aboutS.querySelector('h1')
 
 const project = document.getElementById('project')
-
+const projectFundo = document.getElementById('projetosfundo')
 const contact = document.getElementById('contact')
+const contactFundo = document.getElementById('contatosfundo')
 const controller = new ScrollMagic.Controller()
 
 const scene1 = new ScrollMagic.Scene({
@@ -73,7 +74,7 @@ const scene6 = new ScrollMagic.Scene({
 const scene7 = new ScrollMagic.Scene({
         triggerElement: project,
         triggerHook: 0,
-        duration: 5500,
+        duration: 3500,
     })
     .setPin(project)
     .addTo(controller)
@@ -88,10 +89,23 @@ const scene8 = new ScrollMagic.Scene({
     })
     .setTween(projectAnimation)
     .addTo(controller)
+
 const scene9 = new ScrollMagic.Scene({
         triggerElement: contact,
         triggerHook: 0,
-        duration: 500,
+        duration: 2400,
     })
-    .setPin(project)
+    .setPin(contact)
+    .addTo(controller)
+
+
+const contactFundoAnimation = TweenMax.fromTo(contactFundo, 2, { transform: 'matrix(2,1,1,2,700,0)' }, { transform: 'matrix(1,0,0,1,1,1)' });
+const scene10 = new ScrollMagic.Scene({
+        triggerElement: contact,
+        triggerHook: 0,
+        offset: 0,
+        duration: 2500,
+
+    })
+    .setTween(contactFundoAnimation)
     .addTo(controller)

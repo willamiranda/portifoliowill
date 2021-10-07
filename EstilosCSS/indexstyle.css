@@ -21,13 +21,15 @@ section {
     color: rgb(255, 255, 255);
     font-size: 50px;
     text-transform: uppercase;
+    text-shadow: rgb(224, 0, 0) 0.1em 0.1em 0.2em
 }
 
 .title2 {
     background: rgba(255, 255, 255, 0.959);
-    color: rgba(153, 51, 153, 0.555);
+    color: rgba(158, 16, 158, 0.555);
     font-size: 40px;
     margin-top: 20px;
+    text-shadow: rgb(102, 66, 185) 0.1em 0.1em 0.2em
 }
 
 .centralizar {
@@ -39,7 +41,7 @@ section {
 }
 
 #intro {
-    background: url(/imgs/programing.jpeg) no-repeat;
+    background: url(/imgs/helloWorld.jpg) no-repeat;
     background-size: cover;
     background-position: 50%;
 }
